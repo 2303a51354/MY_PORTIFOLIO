@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Naredla Deepthi | Software Engineer Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: #38bdf8; }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    header h1 { font-size: 3.2rem; font-weight: 700; }
+    header p { font-size: 1.3rem; margin: 10px 0 20px; }
+
+    .btn {
+      background: #020617;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 30px;
+      margin: 8px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0f172a;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #38bdf8;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .skill-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-title i { color: #38bdf8; font-size: 1.3rem; }
+    .percent { color: #94a3b8; }
+
+    .progress {
+      background: #0f172a;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 10px;
+      width: 0;
+      background: linear-gradient(90deg, #38bdf8, #22d3ee);
+      animation: load 2s forwards;
+    }
+
+    @keyframes load {
+      to { width: var(--value); }
+    }
+
+    /* PROJECTS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+    .card h3 i { color: #38bdf8; margin-right: 8px; }
+
+    /* CONTACT */
+    .contact-info {
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .contact-info p {
+      margin: 12px 0;
+    }
+
+    .contact-info i {
+      color: #38bdf8;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="photo2.jpg" alt="Deepthi" class="profile-pic">
+  <h1>Deepthi</h1>
+  <p>Computer Science Engineering Student | Aspiring Software Engineer</p>
+
+  <div>
+    <a class="btn" href="#skills">Skills</a>
+    <a class="btn" href="#projects">Projects</a>
+    <a class="btn" href="#resume">Resume</a>
+    <a class="btn" href="#contact">Contact</a>
+  </div>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p class="about">
+    Computer Science Engineering student interested in software development
+    and problem solving. Always eager to learn and build real-world applications.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-title"><i class="fa-brands fa-java"></i> Java</div>
+        <span class="percent">80%</span>
+      </div>
+      <div class="progress"><div class="progress-bar" style="--value:80%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-title"><i class="fa-brands fa-python"></i> Python</div>
+        <span class="percent">80%</span>
+      </div>
+      <div class="progress"><div class="progress-bar" style="--value:75%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-title"><i class="fa-brands fa-html5"></i> HTML & CSS</div>
+        <span class="percent">70%</span>
+      </div>
+      <div class="progress"><div class="progress-bar" style="--value:60%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-title"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <span class="percent">50%</span>
+      </div>
+      <div class="progress"><div class="progress-bar" style="--value:70%"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><i class="fa-solid fa-music"></i> Music ThemeMate</h3>
+      <p>KNN-based music recommendation system.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fa-solid fa-wallet"></i> Personal Finance Tracker</h3>
+      <p>Tracks income, expenses, and savings.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ RESUME SECTION (ADDED HERE) -->
+<section id="resume">
+  <h2>Resume</h2>
+  <p class="about">Click below to download my resume.</p>
+  <div style="text-align:center;">
+    <a class="btn" href="resume.2025.pdf" download>
+      <i class="fa-solid fa-download"></i> Download Resume
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-info">
+
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:naredladeepthi888@gmail.com">naredladeepthi888@gmail.com</a>
+    </p>
+
+    <p>
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+918500732554">+91 8500732554</a>
+    </p>
+
+    <p>
+      <i class="fa-brands fa-github"></i>
+      <a href="https://github.com/2303a51354" target="_blank">
+        github.com/2303a51354
+      </a>
+    </p>
+
+    <p>
+      <i class="fa-brands fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/naredla-deepthi-350b7b287" target="_blank">
+        linkedin.com/in/naredla-deepthi-350b7b287
+      </a>
+    </p>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Deepthi | Built with  using HTML & CSS</p>
+</footer>
+
+</body>
+</html>
